@@ -1,4 +1,4 @@
-package main
+package model
 
 //노드는 최대 M개 부터 M/2개 까지의 자식을 가질 수 있습니다.
 //노드에는 최대 M−1개 부터 [M/2]−1개의 키가 포함될 수 있습니다.
@@ -19,14 +19,14 @@ func newNode() *BTreeNode {
 
 func NewRootNode(value int) *BTreeNode {
 	return &BTreeNode{
-		keys:   make([]int, value),
+		keys:   []int{value},
 		parent: nil,
-		child:  nil,
+		child:  make([]*BTreeNode, 0),
 		isLeaf: false}
 }
 
 func (node *BTreeNode) add(value int) {
-	//TODO: 노드에 value 쳐박기 구현
+
 }
 
 type BTree struct {

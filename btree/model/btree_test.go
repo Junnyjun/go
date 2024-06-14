@@ -1,16 +1,18 @@
-package main
+package model
 
 import "testing"
 
 func TestNewRootNode(t *testing.T) {
-	root := NewRootNode(0)
+	root := NewBTree()
 
-	if root == nil {
-		t.Errorf("Root node is nil")
+	if root != nil {
+		t.Errorf("root.keys[0] does not match")
 	}
+
 }
 
 //NewRootNode 테스트
 //1. keys의 첫번째 값으로 value가는지.
 //2. parent가 nil
-//3. child가 ni
+//3. child가 nil
+//4.isLeaf가 false
