@@ -40,7 +40,7 @@ func Run(searchTerm string) {
 			waitGroup.Done()
 		}(matcher, feed)
 	}
-
+₩
 	// 모든 작업이 완료되었는지를 모니터링할 고루틴을 실행한다.
 	go func() {
 		// 모든 작업이 처리될 때까지 기다린다.
